@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administrator.AdminController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="720.0" style="-fx-background-color: WHITE;" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="720.0" spacing="10.0" style="-fx-background-color: white;">
+               <children>
+                  <Button fx:id="MMInvenButton" mnemonicParsing="false" onAction="#invenOpenProc" text="재고관리">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="MMUserMangeButton" mnemonicParsing="false" onAction="#memberOpenProc" text="회원관리">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="29.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <AnchorPane prefHeight="630.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <GridPane layoutX="20.0" layoutY="-10.0" prefHeight="610.0" prefWidth="680.0" style="-fx-background-color: #EEEEEF;" AnchorPane.topAnchor="-10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <BorderPane fx:id="MMSeat01" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;">
+                           <center>
+                              <Label text="1" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin></Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin></Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat02" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="1">
+                           <center>
+                              <Label text="2" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat03" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="2">
+                           <center>
+                              <Label text="3" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat04" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="3">
+                           <center>
+                              <Label text="4" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat05" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="4">
+                           <center>
+                              <Label text="5" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat06" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.rowIndex="1">
+                           <center>
+                              <Label text="6" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat07" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <center>
+                              <Label text="7" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat08" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <center>
+                              <Label text="8" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat09" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <center>
+                              <Label text="9" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat10" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <center>
+                              <Label text="10" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat11" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.rowIndex="2">
+                           <center>
+                              <Label text="11" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat12" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <center>
+                              <Label text="12" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat14" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <center>
+                              <Label text="14" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat15" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <center>
+                              <Label text="15" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat16" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.rowIndex="3">
+                           <center>
+                              <Label text="16" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat17" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <center>
+                              <Label text="17" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat18" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <center>
+                              <Label text="18" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat19" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <center>
+                              <Label text="19" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat20" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <center>
+                              <Label text="20" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat21" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.rowIndex="4">
+                           <center>
+                              <Label text="21" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat22" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <center>
+                              <Label text="22" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat23" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <center>
+                              <Label text="23" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat24" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <center>
+                              <Label text="24" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat25" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <center>
+                              <Label text="25" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane fx:id="MMSeat13" prefHeight="112.0" prefWidth="126.0" style="-fx-background-color: #6C4874;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <center>
+                              <Label text="13" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="35.0" />
+                                 </BorderPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <bottom>
+                              <VBox prefHeight="20.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </bottom>
+                           <opaqueInsets>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="9.5" left="7.5" right="7.5" top="9.5" />
+                     </padding>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox layoutX="720.0" prefHeight="720.0" prefWidth="360.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane prefHeight="86.0" prefWidth="360.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="7.0" layoutY="56.0" text="주문현황">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="MMOrderDelButton" layoutX="281.0" layoutY="51.0" mnemonicParsing="false" onAction="#orderDeleteProc" text="삭제">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ListView fx:id="MMOrderList" prefHeight="612.0" prefWidth="340.0">
+               <VBox.margin>
+                  <Insets right="20.0" />
+               </VBox.margin>
+            </ListView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

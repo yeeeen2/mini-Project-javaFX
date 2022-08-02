@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="JoinForm" prefHeight="450.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="joinForm.JoinFormController">
+   <children>
+      <Pane layoutX="12.0" layoutY="10.0" prefHeight="430.0" prefWidth="420.0" style="-fx-background-color: #E6DBE9;" />
+      <HBox alignment="CENTER" layoutY="5.0" prefHeight="53.0" prefWidth="444.0">
+         <children>
+            <Label alignment="CENTER" layoutY="5.0" prefHeight="50.0" prefWidth="168.0" text="회원가입" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox layoutX="30.0" layoutY="60.0" prefHeight="300.0" prefWidth="301.0">
+         <children>
+            <HBox prefHeight="290.0" prefWidth="288.0">
+               <children>
+                  <VBox prefHeight="290.0" prefWidth="164.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="100.0" text="이 름" textAlignment="RIGHT">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="100.0" text="아이디" textAlignment="RIGHT">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="100.0" text="비밀번호" textAlignment="RIGHT">
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="100.0" text="비밀번호 확인" textAlignment="RIGHT">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="100.0" text="이메일" textAlignment="RIGHT">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="100.0" text="전화번호" textAlignment="RIGHT">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="260.0" prefWidth="210.0" spacing="15.0">
+                     <children>
+                        <TextField fx:id="regName" prefHeight="30.0" prefWidth="100.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="regId" prefHeight="30.0" prefWidth="100.0" />
+                        <PasswordField fx:id="regPw" prefHeight="30.0" prefWidth="100.0" />
+                        <PasswordField fx:id="regConfirmPw" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="regEmail" prefHeight="30.0" prefWidth="100.0" />
+                        <Label prefHeight="19.0" prefWidth="171.0" text="ex) **@~~~~ .com">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="regTel" prefHeight="30.0" prefWidth="100.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <Button fx:id="regIdCheckButton" layoutX="338.0" layoutY="124.0" mnemonicParsing="false" onAction="#idCheck" prefHeight="25.0" prefWidth="74.0" text="중복확인">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="regCancelButton" layoutX="240.0" layoutY="399.0" mnemonicParsing="false" onAction="#JoinCancel" prefHeight="30.0" prefWidth="100.0" text="취소" />
+      <Button fx:id="regRegButton" layoutX="109.0" layoutY="399.0" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="100.0" text="회원가입" />
+   </children>
+</AnchorPane>

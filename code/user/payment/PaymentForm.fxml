@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="PaymentForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.payment.PaymentController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="55.0" prefWidth="416.0" spacing="5.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="30.0" prefWidth="50.0" text="합 계 :" />
+            <Label fx:id="paymentTotal" prefHeight="23.0" prefWidth="61.0" textAlignment="CENTER" />
+            <Label text="원" />
+            <Button fx:id="paymentPayButton" mnemonicParsing="false" onAction="#payProc" prefHeight="30.0" prefWidth="50.0" text="결제">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="paymentCancelButton" mnemonicParsing="false" onAction="#cancelProc" prefHeight="30.0" prefWidth="50.0" text="취소" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="49.0" prefWidth="323.0" style="-fx-background-color: white;" text="[결 제]">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <left>
+      <TableView fx:id="paymentList" prefHeight="403.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="paymentNum" prefWidth="40.0" text="번호" />
+          <TableColumn fx:id="paymentItem" prefWidth="122.0" text="상 품 명" />
+          <TableColumn fx:id="paymentCount" prefWidth="41.0" resizable="false" text="수 량" />
+            <TableColumn fx:id="paymentPrice" prefWidth="98.0" text="가 격" />
+        </columns>
+         <BorderPane.margin>
+            <Insets left="15.0" />
+         </BorderPane.margin>
+      </TableView>
+   </left>
+   <right>
+      <ScrollBar fx:id="paymentScroll" orientation="VERTICAL" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin></ScrollBar>
+   </right>
+</BorderPane>

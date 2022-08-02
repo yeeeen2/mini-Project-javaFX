@@ -1,0 +1,77 @@
+[member_info]
+
+id (pk)		varchar2(20)	// 아이디
+pw 		varchar2(20)	// 비밀번호
+name 		varchar2(20)	// 이름
+email 		varchar2(50)	// 이메일
+tel 		varchar2(20)	// 전화번호
+remain_time	number		// 회원가입 시 기본 시간 값  default 0 
+register_time 	date		// 가입일자 및 시간
+
+create table member_info(
+id varchar2(20) primary key,
+pw varchar2(20) not null,
+name varchar2(20) not null,
+email varchar2(50),
+tel varchar2(20),
+remain_time number not null,
+register_time date not null
+);
+
+[time]
+
+time_code(pk)	varchar2(20)	// 기본키로 사용할 코드
+charge_time	number		// 충전시간(1시간, 2시간...)
+time_price	number		// 시간권 가격   
+
+create table time(
+time_code varchar2(20) primary key,
+charge_time number,
+time_price number
+);
+
+insert into time values('t001', 3600000, 1000);
+insert into time values('t002', 7200000, 2000);
+insert into time values('t003', 10800000, 3000);
+insert into time values('t005', 18000000, 5000);
+insert into time values('t012', 43200000, 10000);
+insert into time values('t024', 86400000, 20000);
+
+[item]
+i + 1~6 + 001
+item_code(pk)	varchar2(20)	// 기본키로 사용할 코드
+menu_category	varchar2(20)	// 상품 카테고리
+menu_name	varchar2(20)	// 상품명
+price		number		// 가격
+pcs		number		// 수량
+item_pic		varchar2(50)	// 사진
+
+create table item(
+item_code varchar2(20) primary key,
+menu_category varchar2(20) not null,
+menu_name varchar2(20) not null,
+price number,
+pcs number,
+item_pic varchar2(50)
+);
+
+[sale]
+
+sale_code(fk)	varchar2(20)	// 외래키로 사용할 코드(오류로 인해 사용불가)
+sale_cost		number		// 판매 금액(수량*단가)
+sale_pcs		number		// 판매 수량
+sale_time		date		// 판매 일자
+
+create table sale(
+sale_code varchar2(20),
+sale_cost number,
+sale_pcs number,
+sale_time date,
+foreign key (sale_code) references time(time_code),
+foreign key (sale_code) references item(item_code)
+);
+
+
+
+
+
